@@ -75,7 +75,7 @@ else
 #endregion  t e s t    d o u b l e
 
 
-#region  t e s t    d ecimal
+#region  t e s t    d e c i m a l
 testRoundTripIn = new MyClass
 {
     UnderlyingItem = 1.23m,
@@ -93,7 +93,7 @@ else
 {
     Console.WriteLine($"Error decimal deserialized as {returnedType.FullName}");
 }
-#endregion  t e s t    d o u b l e
+#endregion  t e s t     d e c i m a l
     public class MyClass
     {
         public int Counter { get; set; }
