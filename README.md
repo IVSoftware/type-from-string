@@ -56,7 +56,7 @@ The `UnderlyingItem` property itself is ignored by the json serializer. The gett
 
 [![four types][1]][1]
 
-**string[]**
+`string[]`
 
     MyClass testRoundTripIn, testRoundTripOut;
     string json;
@@ -80,7 +80,7 @@ The `UnderlyingItem` property itself is ignored by the json serializer. The gett
         Console.WriteLine($"Error string[] Deserialized as {returnedType.Name}");
     }
 
-**List<string>**
+`List<string>`
 
     testRoundTripIn = new MyClass
     {
@@ -100,7 +100,7 @@ The `UnderlyingItem` property itself is ignored by the json serializer. The gett
         Console.WriteLine($"Error List<string> deserialized as {returnedType.FullName}");
     }
 
-**double**
+`double`
 
     testRoundTripIn = new MyClass
     {
@@ -120,7 +120,7 @@ The `UnderlyingItem` property itself is ignored by the json serializer. The gett
         Console.WriteLine($"Error double deserialized as {returnedType.FullName}");
     }
 
-**decimal**
+`decimal`
 
     testRoundTripIn = new MyClass
     {
