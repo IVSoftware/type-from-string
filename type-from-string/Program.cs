@@ -9,6 +9,8 @@ var type = Type.GetType($"{full.qualified.typeName}");
 using Newtonsoft.Json;
 using System.Reflection;
 
+Console.Title = "Test MyClass";
+
 MyClass testRoundTripIn, testRoundTripOut;
 string json;
 Type returnedType;
@@ -45,14 +47,13 @@ testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json);
 returnedType = testRoundTripOut.UnderlyingItem.GetType();
 if (typeof(List<string>).Equals(returnedType))
 {
-    Console.WriteLine($"MyClass.UnderlyingItem deserialized as {returnedType.Name}");
+    Console.WriteLine($"MyClass.UnderlyingItem deserialized as {returnedType.FullName}");
 }
 else
 {
     Console.WriteLine($"Error List<string> deserialized as {returnedType.FullName}");
 }
 #endregion  t e s t    L i s t < s t r i n g >
-
 
 #region  t e s t    d o u b l e
 testRoundTripIn = new MyClass
@@ -74,7 +75,6 @@ else
 }
 #endregion  t e s t    d o u b l e
 
-
 #region  t e s t    d e c i m a l
 testRoundTripIn = new MyClass
 {
@@ -94,6 +94,8 @@ else
     Console.WriteLine($"Error decimal deserialized as {returnedType.FullName}");
 }
 #endregion  t e s t     d e c i m a l
+
+Console.ReadKey();
     public class MyClass
     {
         public int Counter { get; set; }

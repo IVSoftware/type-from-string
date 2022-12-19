@@ -1,4 +1,4 @@
-Here's one possible scheme that, when tested with the four types mentioned by gunr2171, seems to work. It relies on a `UnderlyingTypeName` to serialize the full type name and meets the requirement that the `MyClass` cannot be generic.
+Here's one possible scheme that, when tested with the four types mentioned by gunr2171, seems to work. It adds an `UnderlyingTypeName` property to serialize the full type name and meets the requirement that the `MyClass` cannot be generic.
 
 The `UnderlyingItem` property itself is ignored by the json serializer. The getter for this property queries the loaded assemblies to find one containing the target type. If found, the json deserializer uses the specific type. Otherwise the default Json.Net deserializer is invoked.
 
@@ -54,7 +54,7 @@ The `UnderlyingItem` property itself is ignored by the json serializer. The gett
 
 **Testbench**
 
-[![four types][1]][1]
+[![test output showing four types][1]][1]
 
 `string[]`
 
@@ -141,4 +141,4 @@ The `UnderlyingItem` property itself is ignored by the json serializer. The gett
     }
 
 
-  [1]: https://i.stack.imgur.com/QItdj.png
+  [1]: https://i.stack.imgur.com/hiV4C.png
