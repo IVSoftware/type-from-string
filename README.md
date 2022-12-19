@@ -68,7 +68,7 @@ The `UnderlyingItem` property itself is ignored by the json serializer. The gett
     };
     json = JsonConvert.SerializeObject(testRoundTripIn, Formatting.Indented);
 
-    testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json)!;
+    testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json);
 
     returnedType = testRoundTripOut.UnderlyingItem.GetType();
     if (typeof(string[]).Equals(returnedType))
@@ -88,7 +88,7 @@ The `UnderlyingItem` property itself is ignored by the json serializer. The gett
     };
     json = JsonConvert.SerializeObject(testRoundTripIn, Formatting.Indented);
 
-    testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json)!;
+    testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json);
 
     returnedType = testRoundTripOut.UnderlyingItem.GetType();
     if (typeof(List<string>).Equals(returnedType))
@@ -108,7 +108,7 @@ The `UnderlyingItem` property itself is ignored by the json serializer. The gett
     };
     json = JsonConvert.SerializeObject(testRoundTripIn, Formatting.Indented);
 
-    testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json)!;
+    testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json);
 
     returnedType = testRoundTripOut.UnderlyingItem.GetType();
     if (typeof(double).Equals(returnedType))
@@ -128,7 +128,7 @@ The `UnderlyingItem` property itself is ignored by the json serializer. The gett
     };
     json = JsonConvert.SerializeObject(testRoundTripIn, Formatting.Indented);
 
-    testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json)!;
+    testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json);
 
     returnedType = testRoundTripOut.UnderlyingItem.GetType();
     if (typeof(decimal).Equals(returnedType))

@@ -20,7 +20,7 @@ testRoundTripIn = new MyClass
 };
 json = JsonConvert.SerializeObject(testRoundTripIn, Formatting.Indented);
 
-testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json)!;
+testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json);
 
 returnedType = testRoundTripOut.UnderlyingItem.GetType();
 if (typeof(string[]).Equals(returnedType))
@@ -40,7 +40,7 @@ testRoundTripIn = new MyClass
 };
 json = JsonConvert.SerializeObject(testRoundTripIn, Formatting.Indented);
 
-testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json)!;
+testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json);
 
 returnedType = testRoundTripOut.UnderlyingItem.GetType();
 if (typeof(List<string>).Equals(returnedType))
@@ -61,7 +61,7 @@ testRoundTripIn = new MyClass
 };
 json = JsonConvert.SerializeObject(testRoundTripIn, Formatting.Indented);
 
-testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json)!;
+testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json);
 
 returnedType = testRoundTripOut.UnderlyingItem.GetType();
 if (typeof(double).Equals(returnedType))
@@ -82,7 +82,7 @@ testRoundTripIn = new MyClass
 };
 json = JsonConvert.SerializeObject(testRoundTripIn, Formatting.Indented);
 
-testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json)!;
+testRoundTripOut = JsonConvert.DeserializeObject<MyClass>(json);
 
 returnedType = testRoundTripOut.UnderlyingItem.GetType();
 if (typeof(decimal).Equals(returnedType))
